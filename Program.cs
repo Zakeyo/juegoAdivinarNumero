@@ -12,9 +12,9 @@ namespace juegoAdivinarNumero
             Console.WriteLine("Vamos a jugar el juego de adivinar el número.");
             Console.WriteLine("Intenta adivinar el número que elegí del 1 al 100");
 
-
             string input;
             int number = -1;
+            int intentos = 1;
 
             while (number != numberRandom)
             {
@@ -27,14 +27,17 @@ namespace juegoAdivinarNumero
                 else if (number > numberRandom)
                 {
                     Console.WriteLine("↓↓↓ El valor es menor ↓↓↓");
+                    intentos += 1;
                 }
                 else if (number < numberRandom)
                 {
                     Console.WriteLine("↑↑↑ El valor es mayor ↑↑↑");
+                    intentos += 1;
                 }
             }
 
             Console.WriteLine("FELICIDADES, HAS GANADO EL JUEGO!");
+            Console.WriteLine($"Te ha tomado {intentos} intentos");
         }
     }
 }
