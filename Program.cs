@@ -12,6 +12,7 @@ namespace juegoAdivinarNumero
             Console.WriteLine("Vamos a jugar el juego de adivinar el número.");
             Console.WriteLine("Intenta adivinar el número que elegí del 1 al 100");
 
+
             string input;
             int number = -1;
 
